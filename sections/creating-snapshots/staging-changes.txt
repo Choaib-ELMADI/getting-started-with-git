@@ -2,4 +2,8 @@ STAGING CHANGES
 ===============
 To stage the changes, run:
 
-> git add .
+> git add <filename>
+
+You can add multiple files separated by a space. 
+You can use a . to add all the files and subdirectories recursively.
+
