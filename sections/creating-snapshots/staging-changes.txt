@@ -7,3 +7,5 @@ To stage the changes, run:
 You can add multiple files separated by a space. 
 You can use a . to add all the files and subdirectories recursively.
 
+Once you stage the changes, you need to commit them to store the 
+proposed snapshot permanently. 
