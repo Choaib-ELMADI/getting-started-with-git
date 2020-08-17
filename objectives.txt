@@ -4,3 +4,4 @@ By the end of this course, you'll be able to
 - Browse history 
 - Create and merge branches
 - Collaborate with others
+- Work with both the command line and visual tools
