@@ -1,3 +1,5 @@
+INITIALIZING A REPOSITORY
+-------------------------
 The first step is to initialize a Git repository. 
 To do that run: 
 git init 
