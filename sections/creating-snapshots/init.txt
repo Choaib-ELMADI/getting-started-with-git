@@ -1,3 +1,6 @@
 The first step is to initialize a Git repository. 
 To do that run: 
 git init 
+
+This will create a .git subdirectory in the current directory.
+If you delete this subdirectory, you'll lose your project history.
