@@ -1,5 +1,5 @@
 STAGING CHANGES 
-===============
+
 To stage the changes, run:
 
 > git add <filename>
