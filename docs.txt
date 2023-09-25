@@ -70,3 +70,9 @@
         -> %cd = commit date
 
     git config --global alias.name "log --pretty=format:''" ==> Create custom console logs / actions...
+
+    git diff HEAD~2 HEAD                    ==> Get changes between these two commits
+
+    HEAD -> master -> last commit -> before last commit -> ... -> first commit
+    git checkout (identifier)               ==> HEAD now points to (indentifier)
+    (detached HEAD state HEAD detached from master, in this situation we should not create new commits, only view the code)
