@@ -1,0 +1,72 @@
+1. What is Git?
+    Git is a version control system
+        => Records changes made to our code overtime and store them in a repository.
+        * Centralized: all team members are connected to a single center server
+        * Distributed: every team member has a copy of the project
+
+2. Using Git:
+    -> Command line
+    -> Code Editer
+    -> Graphical user interfaces
+
+3. Creating Snapshots:
+    git init                                ==> Initialize a repository
+    rm .git                                 ==> Remove .git file (losing project history)
+
+    git add ...                             ==> Add files to the staging area
+    (We review our changes, if everything is good)
+    git commit -m "MESAGE..."               ==> Take a snapshot of our code and store it in the repository
+    (after committing the changes, the staging area contains the same snapshot in our repository)
+    git commit -am "Message..."             ==> Skipping staging area
+    git ls-files                            ==> Get all files in the staging area
+    rm fileName                             ==> Removes fileName only from working directory (not a git command)
+    git rm fileName                         ==> Removes fileName from both working directory and staging area
+    git mv fileName newFileName             ==> Rename a file in one go (deletion & adding)
+    git rm --cached logss/                  ==> Remove logss folder from staging area
+    
+    git status                              ==> Show the status of the project
+    git status -s                           ==> Show short statuses in two colomns (staging area | working directory)
+        M: Modified
+        A: Added
+        ?: Untracked
+
+    git diff --staged                       ==> View staged changes
+    git diff                                ==> Compares working directory with staging area (unstaged changes)
+    git difftool                            ==> Compares working directory with staging area in VSCode
+
+    git log                                 ==> Show commits from latest to oldest
+    git log --oneline                       ==> Short description of the commits
+    git log --oneline --reverse             ==> Short description of the commits from oldest
+    
+    git show ...                            ==> Shows a specific commit details
+    (here we specify the commit identifier or we use the HEAD pointer)
+    git ls-tree ...                         ==> Shows files & folders in a commit
+    (here we specify the commit identifier or we use the HEAD pointer)
+    
+    git restore --staged fileName           ==> Restore changes from staging area to working directory
+    (when restoring, git takes a snapshot from the last commit and put it in the staging area)
+    git restore ...                         ==> Undo local changes
+    (git takes a snapshot of these files in the staging area and put them in our working directory)
+    git clean -fd                           ==> Undo local changes (for untracked files)
+    git restore --source=HEAD~1 fileName    ==> Restore fileName from a specific commit
+
+    *** Git Objects:
+        -> Commits
+        -> Blobs (files)
+        -> Trees (directories)
+        -> Tags
+        
+4. Browsing History:
+    git log --stat                          ==> Shows details of the commits with number of insertions & deletions for each one
+    git log --patch                         ==> Shows details of the commits line by line
+    git log -3                              ==> View last 3 commits
+    git log --author="name"                 ==> Filter commits by name
+    git log --after="date"                  ==> Filter commits by date (after, before)
+    git log --grep="word"                   ==> Filter commits by the words message
+    git log --pretty=format:""              ==> Format log output
+        -> %an = author name
+        -> %H  = commit hash
+        -> %h  = abbreviated commit hash
+        -> %cd = commit date
+
+    git config --global alias.name "log --pretty=format:''" ==> Create custom console logs / actions...
