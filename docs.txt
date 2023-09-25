@@ -70,10 +70,19 @@
         -> %cd = commit date
 
     git config --global alias.name "log --pretty=format:''" ==> Create custom console logs / actions...
-
     git diff HEAD~2 HEAD                    ==> Get changes between these two commits
+    git blame fileName                      ==> View who made changes to fileName
 
     HEAD -> master -> last commit -> before last commit -> ... -> first commit
     git checkout (identifier)               ==> HEAD now points to (indentifier). In our working directory, we have a copy of this commit (identifier)
+    git checkout (identifier) fileName      ==> Restore fileName from the commit (identifier)
     (detached HEAD state HEAD detached from master, in this situation we should not create new commits, only view the code)
     git checkout master                     ==> Return HEAD -> master
+
+    git tag tagName (identifier)            ==> Create bookmarks (lightweight tags)
+    git tag -a tagName -m "Message..."      ==> Create bookmarks (annotated tag)
+    git tag                                 ==> View created tags
+    git tag -n                              ==> View created tags with their messages
+            --> We must provide a message for annotated Tags
+            --> The message for lightweight tags is the message of the commit it points to
+    git tag -d tagName                      ==> Delete a tag
