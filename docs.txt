@@ -98,3 +98,6 @@
     git branch -m branchName newBranchName  ==> Rename a branch
     git branch -d branchName                ==> Delete a branch after merging
     git branch -D branchName                ==> Force the deletion of branchName
+    git log master..branchName              ==> Compare branchName with master branch and show the commits in branchName that aren't in master branch.
+    git diff master..branchName             ==> Compare and show actual changes
+    (if you are in master branch, dont specify master.., use branchName directly)
