@@ -96,3 +96,5 @@
     git branch                              ==> Shows our list of branches
     git switch branchName                   ==> Switch to branchName (HEAD now points to last commit in branchName)
     git branch -m branchName newBranchName  ==> Rename a branch
+    git branch -d branchName                ==> Delete a branch after merging
+    git branch -D branchName                ==> Force the deletion of branchName
