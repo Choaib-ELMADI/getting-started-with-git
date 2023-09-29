@@ -140,3 +140,13 @@
         * soft: working directory and staging area are not affected, only last snapshot
 
     git revert -m 1(first parent) HEAD      ==> Revert a commit (if the history is shared)
+    git merge --squash branchName           ==> Squash merge
+    git rebase master                       ==> Change the base of a new branch to the latest commit in master branch
+        - master and the new branch are diverged
+        - Rebasing rewrites history
+        - Used only in local repositories
+
+    *** Conflicts when Rebasing:
+        git rebase --continue               ==> Continue the rebase process
+        git rebase --skip                   ==> Skip current commit and move to the next one
+        git rebase --abort                  ==> Abort the rebase process
