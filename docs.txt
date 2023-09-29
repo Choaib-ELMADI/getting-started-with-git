@@ -126,3 +126,8 @@
     git config ff no                        ==> Disable fast-forward merges for this repository.
     git branch --merged                     ==> Show merged branches
     git branch --no-merged                  ==> Show unmerged branches
+
+    *** Conflicts:
+        - Same code changes in different ways in two branches
+        - Change in one branch, Delete in other one
+        - Same file added twice in different branches, but different content
