@@ -152,3 +152,4 @@
         git rebase --abort                  ==> Abort the rebase process
 
     git cherry-pick (identifier)            ==> Apply a specific commit from certain branch to the master branch
+    git restore --source=branchName -- fileName ==> Restore fileName in our directory from its latest version in the branchName
