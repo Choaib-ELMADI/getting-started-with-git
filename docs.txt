@@ -133,3 +133,10 @@
         - Same file added twice in different branches, but different content
 
     git merge --abort                       ==> Abort merging, go back to state before start merge process
+
+    git reset --hard HEAD~2                 ==> Undo faulty merges (Only if the history is not shared with others)
+        * hard: working directory, staging area and last snapshot are all affected
+        * mixed: working directory is not affected, only staging area and last snapshot
+        * soft: working directory and staging area are not affected, only last snapshot
+
+    git revert -m 1(first parent) HEAD      ==> Revert a commit (if the history is shared)
