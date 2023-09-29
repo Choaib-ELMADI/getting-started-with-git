@@ -150,3 +150,5 @@
         git rebase --continue               ==> Continue the rebase process
         git rebase --skip                   ==> Skip current commit and move to the next one
         git rebase --abort                  ==> Abort the rebase process
+
+    git cherry-pick (identifier)            ==> Apply a specific commit from certain branch to the master branch
