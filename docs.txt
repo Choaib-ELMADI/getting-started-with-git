@@ -124,3 +124,5 @@
     git switch -C branchName                ==> Create a branch and switch to it
     git merge --no-ff branchName            ==> Merge branchName not using fast-forward merges
     git config ff no                        ==> Disable fast-forward merges for this repository.
+    git branch --merged                     ==> Show merged branches
+    git branch --no-merged                  ==> Show unmerged branches
