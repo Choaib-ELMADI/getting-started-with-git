@@ -86,3 +86,8 @@
             --> We must provide a message for annotated Tags
             --> The message for lightweight tags is the message of the commit it points to
     git tag -d tagName                      ==> Delete a tag
+
+5. Branching:
+    -> Our main workspace is the master, branching allows us to create isolated workspaces. After testing, we merge the new workspace with the master.
+    -> Creating a branche is just creating another pointer to the last commit.
+    -> HEAD pointer points to the current branche where we're working right now.
