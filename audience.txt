@@ -1,4 +1,5 @@
-AUDIENCE 
+THIS COURSE IS GREAT FOR ME
 
-This course is for anyone who wants to learn Git. 
-No prior experience is required.
+===========================
+
+This course is for anyone who wants to learn Git.
