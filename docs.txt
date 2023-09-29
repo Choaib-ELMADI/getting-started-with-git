@@ -101,3 +101,20 @@
     git log master..branchName              ==> Compare branchName with master branch and show the commits in branchName that aren't in master branch.
     git diff master..branchName             ==> Compare and show actual changes
     (if you are in master branch, dont specify master.., use branchName directly)
+    
+    git stash push -m "Message..."          ==> Save changes in a safe place so we can switch branches
+    git stash push -am "Message..."         ==> Save all changes
+    git stash list                          ==> Show stashes list
+    git stash show (identifier)             ==> Show the details of a specific stash
+    git stash apply (identifier)            ==> Apply the changes in stash (identifier)
+    git stash drop (identifier)             ==> Delete stash (identifier)
+    git stash clear                         ==> Delete all stashes
+
+    -> Merging is bringing changes from one branch to another
+        * Fast-forward merges (if branches have not diverged):
+            After creating a new branch and apply the changes, master pointer is left behind. Fast-forward merges works by moving the master pointer forward to the new branch position.
+
+        * 3-way merges (if branches have diverged):
+            master contains some changes that are not in the new branch (they are diverged).
+            Git creates a commit (merge commit) that combines the changes for these two branches.
+            3-way merges ==> 1 commit before code changes, the 2 tips of our branches after code changes
