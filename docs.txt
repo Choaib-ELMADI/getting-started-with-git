@@ -122,3 +122,5 @@
 
     git merge branchName                    ==> Merge branchName with master branch (run in master)
     git switch -C branchName                ==> Create a branch and switch to it
+    git merge --no-ff branchName            ==> Merge branchName not using fast-forward merges
+    git config ff no                        ==> Disable fast-forward merges for this repository.
