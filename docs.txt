@@ -131,3 +131,5 @@
         - Same code changes in different ways in two branches
         - Change in one branch, Delete in other one
         - Same file added twice in different branches, but different content
+
+    git merge --abort                       ==> Abort merging, go back to state before start merge process
