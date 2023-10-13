@@ -154,4 +154,42 @@
     git cherry-pick (identifier)            ==> Apply a specific commit from certain branch to the master branch
     git restore --source=branchName -- fileName ==> Restore fileName in our directory from its latest version in the branchName
 
-6. 
+6. Collaboration:
+    *) Workflows: (How to synchronize our working directory with each other)
+        <-> In Centralized Workflow (often for private projects), every dev has a copy of the repository.
+        -> And there is also a central repository that they use to synchronize their work.
+        -> This central repo could be in a private server or in the cloud (Github, Gitlab...).
+        -> So, to collaboration with others, we start by cloning the central repo.
+
+        <-> Integration Manager (often for open-source projects):
+        -> In an open-source project, we have 1 or more maintainers and a lot of contributors.
+        -> 1) To contribute on a project, first fork the project (make a copy in the cloud (so a maintainer can review it))
+        -> 2) Clone this repo and make your changes
+        -> 3) Push changes to the forked repo
+        -> 4) Send a pull request to a maintainer
+        -> 5) A maintainer pull our changes and review them
+        -> 6) If its good, they merge the changes into their local repo
+        -> 7) And then they push the changes to the official repo
+
+    *) Cloning a repo:
+        git clone repo_url                      ==> Clone the repo_url repository
+        origin                                  ==> When we clone a repo, git names the source repo origin
+        origin/master (remote tracking branch)  ==> git tells us where is the master branch in the origin repo
+        origin/HEAD                             ==> git tells us where is the HEAD pointer in the origin repo
+        git remote                              ==> Show the list of remote repositories
+        git remote -v                           ==> v for verbose -> gives us the url that git uses when we talk to this remote repo
+
+    *) Fetching:
+        git fetch repo(origin) branch(optional) ==> Fetch the changes from the origin repo (not merged)
+        git branch -vv                          ==> Show how our local and remote tracking branch are diverging
+        git merge origin/master                 ==> Merge the origin repo changes with our local branch
+        git pull                                ==> pull = fetch + merge (using merge commit)
+        git pull --rebase                       ==> pull = fetch + merge using Rebasing (git is gonna rebase master on top of origin/master)
+    
+    *) Pushing:
+        git push origin branchToPush            ==> Push the local changes to the origin repo
+        git push origin tagName                 ==> Push a tag to the origin repo
+        git push origin --delete tagName        ==> Remove a tag from the origin repo (tag still available in local repo, just delete it if you dont need it)
+
+    *) Releases:
+        
