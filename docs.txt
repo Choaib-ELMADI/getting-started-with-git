@@ -200,3 +200,8 @@
         git branch -r                           ==> Show all the remote tracking branches
         git push -u origin newBranchName        ==> Link the new branch to a branch in origin
         git push -d origin newBranchName        ==> Delete the newBranchName, after completion (newBranchName is not deleted from our directory)
+
+    *) Collaboration workflow:
+        git switch -C newBranchName origin/branchToMapToInGithub ==> Create (& switch to) a private branch that maps to an already existing branch in origin
+        git push -d origin newBranchName        ==> Remove the branch from origin as well as its remote tracking branch in my local repo (still need to delete the local branch)
+        git remote prune origin                 ==> Remove the tracking branches that aren't under remote
