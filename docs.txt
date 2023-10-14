@@ -198,10 +198,30 @@
     *) Sharing branches:
         - When we create a new branch, we can't directly push it to origin
         git branch -r                           ==> Show all the remote tracking branches
-        git push -u origin newBranchName        ==> Link the new branch to a branch in origin
+        git push -u origin newBranchName        ==> Link the new branch to a branch in origin (use this only in the first time --> git push)
         git push -d origin newBranchName        ==> Delete the newBranchName, after completion (newBranchName is not deleted from our directory)
 
     *) Collaboration workflow:
         git switch -C newBranchName origin/branchToMapToInGithub ==> Create (& switch to) a private branch that maps to an already existing branch in origin
         git push -d origin newBranchName        ==> Remove the branch from origin as well as its remote tracking branch in my local repo (still need to delete the local branch)
         git remote prune origin                 ==> Remove the tracking branches that aren't under remote
+
+    *) Pull requests:
+        - With pull requests, we open a discussion with team members
+
+        1) Create a new branch and make your changes
+        2) Push the new branch
+        3) In Github, create a new pull request
+        4) Create a pull request
+        5) Add reviewers (sends an email to a reviewer to review our changes)
+
+        6) Reviewer gets the email and start the review then finish it
+
+        7) Make other changes and push them
+        8) In Github, request a reviewer again
+
+        9) Reviewer reviews the new changes and submit them
+        10) Merge pull request
+        11) Delete branch after merging
+
+        12) In your local machine, pull the changes from origin, delete tracking branches that aren't under remote and delete the new created branch
