@@ -194,3 +194,9 @@
     *) Releases:
         - Releases are a Github feature
         - When we create a release, Github addes it to the last commit as a tag
+
+    *) Sharing branches:
+        - When we create a new branch, we can't directly push it to origin
+        git branch -r                           ==> Show all the remote tracking branches
+        git push -u origin newBranchName        ==> Link the new branch to a branch in origin
+        git push -d origin newBranchName        ==> Delete the newBranchName, after completion (newBranchName is not deleted from our directory)
