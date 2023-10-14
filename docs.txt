@@ -192,4 +192,5 @@
         git push origin --delete tagName        ==> Remove a tag from the origin repo (tag still available in local repo, just delete it if you dont need it)
 
     *) Releases:
-        
+        - Releases are a Github feature
+        - When we create a release, Github addes it to the last commit as a tag
