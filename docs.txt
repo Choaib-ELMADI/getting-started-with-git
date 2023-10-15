@@ -231,3 +231,10 @@
     *) Issues:
         - Issues are a Github feature
         - To track the progress of verious issues, we use Milestones
+
+    *) Keeping a forked repo up to date:
+        - The forked repo is not connected to the base repo. So, from times to times, it can get out of sync with the base repo.
+        - In our machine, the local repo has a reference to the forked repo, we add another one to the base repo
+        git remote add newRefToBaseName(upstream, base) base_repo_url   ==> Add another reference to the base repo so we can pull the changes and push them to the forked repo
+        git remote rename oldName newName                               ==> Rename a remote repo
+        git remote rm remoteRepoName                                    ==> Delete a remote repo
