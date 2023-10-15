@@ -225,4 +225,9 @@
         11) Delete branch after merging
 
         12) In your local machine, pull the changes from origin, delete tracking branches that aren't under remote and delete the new created branch
-        
+
+    *) Resolve conflicts:
+    
+    *) Issues:
+        - Issues are a Github feature
+        - To track the progress of verious issues, we use Milestones
