@@ -178,6 +178,7 @@
         origin/HEAD                             ==> git tells us where is the HEAD pointer in the origin repo
         git remote                              ==> Show the list of remote repositories
         git remote -v                           ==> v for verbose -> gives us the url that git uses when we talk to this remote repo
+        git remote set-url origin https://github.com/Choaib-ELMADI/getting-started-with-git.git ==> Update a repo's name
 
     *) Fetching:
         git fetch repo(origin) branch(optional) ==> Fetch the changes from the origin repo (not merged)
@@ -238,4 +239,7 @@
         git remote add newRefToBaseName(upstream, base) base_repo_url   ==> Add another reference to the base repo so we can pull the changes and push them to the forked repo
         git remote rename oldName newName                               ==> Rename a remote repo
         git remote rm remoteRepoName                                    ==> Delete a remote repo
-        
+
+7. Rewriting History:
+    * Dont rewrite public history
+    * Dont rewrite public history
